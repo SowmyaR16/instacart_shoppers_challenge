@@ -1,10 +1,15 @@
 Running the app
 
 1.bundle install
+
 2.rake db:create
+
 3.rake db:migrate
+
 4.rake db:seed
+
 5.rails s
+
 6.Go to http://localhost:3000
 
 This application has only the first part of the challenge 'Shopper Application'. I have used Bootstrap to develop the front end.
