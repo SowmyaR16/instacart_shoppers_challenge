@@ -16,7 +16,7 @@
                   = text_field_tag :email, @email, class: 'form-control', autofocus: true, placeholder: "abc@gmail.com", type: "email",  required: true
               .row
                 .col-sm-12.group
-                  = text_field_tag :phone, @phone, class: 'form-control', autofocus: true, placeholder: 'Phone number', type: "tel", required: true
+                  = text_field_tag :phone, @phone, class: 'form-control', autofocus: true, placeholder: '123-456-7890', type: "tel", pattern:'\d{3}[\-]\d{3}[\-]\d{4}', maxlength: "12", minlength: "12", required: true
               .row
                 .col-sm-12.group
                   = submit_tag "Login", class: 'btn btn-success form-control'

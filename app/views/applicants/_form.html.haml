@@ -15,7 +15,7 @@
             = f.select :region, options_for_select(Applicant::REGIONS, @applicant.region), { :selected => nil, :prompt => 'Select your region' }, class: 'form-control', required: true
         .row
           .col-sm-12.group
-            = f.text_field :phone, class: 'form-control', autofocus: true, placeholder: 'Phone number', type: 'tel', required: true
+            = f.text_field :phone, class: 'form-control', autofocus: true, placeholder: '123-456-7890', type: 'tel', pattern:'\d{3}[\-]\d{3}[\-]\d{4}', maxlength: "12", minlength: "12", required: true
         .row
           .col-sm-12.group
             = f.text_field :email, class: 'form-control', type: 'email', autofocus: true, placeholder: 'abc@gmail.com', required: true
