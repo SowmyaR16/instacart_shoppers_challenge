@@ -1,0 +1,20 @@
+.hero
+  %nav.navbar
+  .container-fluid
+    .navbar-inner
+      %a{:href => "#"}
+      =image_tag "Instacart-logo.png", class: 'img-responsive'
+
+  .container.formcontent.text-center
+    %h1 
+      Your application has been received.
+    .container.col-md-12
+      .row
+        .col-sm-12.group
+          %p Our hiring team will contact you soon.
+      .row
+        .col-sm-12.group 
+          = link_to "Edit your application", edit_applicant_path(current_applicant), class: 'btn btn-success btn-lg'
+      .row
+        .col-sm-12.group
+          = link_to "Logout", logout_path, class: 'btn btn-link btn-lg'

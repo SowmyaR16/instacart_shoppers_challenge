@@ -1,0 +1,40 @@
+- if @errors
+  %p
+  = @errors
+%fieldset
+  .formgroup.form-group-lg
+    = form_for(@applicant) do |f|
+      .container.col-sm-12
+        .row
+          .col-sm-6.group
+            = f.text_field :first_name, class: 'form-control', autofocus: true, placeholder: 'First Name', required: true
+          .col-sm-6.group
+            = f.text_field :last_name, class: 'form-control', autofocus: true, placeholder: 'Last Name', required: true
+        .row
+          .col-sm-12.group
+            = f.select :region, options_for_select(Applicant::REGIONS, @applicant.region), { :selected => nil, :prompt => 'Select your region' }, class: 'form-control', required: true
+        .row
+          .col-sm-12.group
+            = f.text_field :phone, class: 'form-control', autofocus: true, placeholder: 'Phone number', type: 'tel', required: true
+        .row
+          .col-sm-12.group
+            = f.text_field :email, class: 'form-control', type: 'email', autofocus: true, placeholder: 'abc@gmail.com', required: true
+        .row
+          .col-sm-12.group
+            = f.select :phone_type, options_for_select(Applicant::PHONE_TYPES, @applicant.phone_type) , { :selected => nil, :prompt => 'Select Phone Type' }, class: 'form-control', required: true
+        .row
+          .col-sm-12.group
+            = f.text_field :source, class: 'form-control', autofocus: true, placeholder: 'Referral(optional)'
+        .row
+          .col-sm-1.group
+            = f.check_box :over_21, class: 'form-control', required: true
+          .col-sm-11.group.text-left
+            = f.label :over_21, "I am over 21 years.", class: 'small'
+            = f.hidden_field :workflow_state, value: 'applied'
+            = f.hidden_field :reason, value: 'new_applicant'
+        .row
+          .col-sm-12.group
+            = f.submit class: 'form-control btn btn-success btn-lg'
+        .row
+          .col-sm-12.group
+            = link_to "Cancel", root_path, class: 'form-control btn btn-success btn-lg'

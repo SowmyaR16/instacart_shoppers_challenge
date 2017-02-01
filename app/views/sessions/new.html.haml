@@ -1,0 +1,25 @@
+.hero
+  %nav.navbar
+  .container-fluid
+    .navbar-inner
+      %a{:href => "#"}
+      =image_tag "Instacart-logo.png", class: 'img-responsive'
+  .formcontent.container.text-center
+    %h1
+      Login to edit your application
+      %fieldset
+        .formgroup.form-group-lg
+          = form_tag login_path do
+            .container.col-sm-12.text-center
+              .row
+                .col-sm-12.group
+                  = text_field_tag :email, @email, class: 'form-control', autofocus: true, placeholder: "abc@gmail.com", type: "email",  required: true
+              .row
+                .col-sm-12.group
+                  = text_field_tag :phone, @phone, class: 'form-control', autofocus: true, placeholder: 'Phone number', type: "tel", required: true
+              .row
+                .col-sm-12.group
+                  = submit_tag "Login", class: 'btn btn-success form-control'
+              .row
+                .col-sm-12.group
+                  = link_to "Cancel", root_path, class: 'form-control btn btn-success btn-lg'

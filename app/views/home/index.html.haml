@@ -1,0 +1,18 @@
+.hero
+  %nav.navbar
+  .container-fluid
+    .navbar-inner
+      %a{:href => "#"}
+      =image_tag "Instacart-logo.png", class: 'img-responsive'
+  .applycontent.container-fluid.text-center
+    %p.margin
+      Instacart is building the best way for people anywhere in the world to shop for groceries.
+    %p.margin
+      Earn money shopping and delivering groceries on your schedule.
+    %p
+      - if logged_in?
+        = link_to "View Application", edit_applicant_path(current_applicant), class: 'btn btn-lg btn-success'
+        = link_to "Logout", logout_path, class: 'btn btn-link btn-lg'
+      - else
+        = link_to "Apply now", register_path, class: 'btn btn-lg btn-success'
+        = link_to "Applied already? Login", login_path, class: 'btn btn-link btn-lg'

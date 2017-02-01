@@ -1,0 +1,90 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require rails_bootstrap_forms
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.hero {
+  color: #fff;
+  background: asset-data-url("inst_lp_image.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding-bottom: 25%;
+  font-size: 2.5em;
+  font-family: Helvetica;
+  font-weight:normal;
+}
+
+.applycontent {
+  position: relative;
+  margin: 100px auto;
+}
+.margin {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+.btn-success {
+  font-size: 1em;
+  font-weight: normal;
+}
+.navbar-inner{
+    /*height: 90px*/
+    min-height: 60px;
+    }
+.navbar .logo{
+    padding: 0 10px;
+}
+h1 {
+  color:#60ab59;
+}
+.container {
+  padding-top:30px;
+}
+.margin {
+    margin-top:20px;
+    margin-bottom:20px;
+
+}
+.formcontent {
+  background-color: #f2f2f2;
+  margin: 100px auto;
+  color: #ff3333;
+}
+
+.group { 
+  margin-bottom:2%;
+  color: #000;
+}
+.btn-link, .btn-link:hover, .btn-link:active {
+  color: #60ab59;
+  font-size: 0.75em;
+  text-decoration:underline;
+}
+
+
+@media screen and (max-width: 800px) {
+    body {
+        background-size: auto 100%;
+    }
+    .container.fluid {
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+    }
+}
+

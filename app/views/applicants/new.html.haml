@@ -1,0 +1,13 @@
+- # your applicant landing page/form goes here!
+.hero
+  %nav.navbar
+  .container-fluid
+    .navbar-inner
+      %a{:href => "#"}
+      =image_tag "Instacart-logo.png", class: 'img-responsive'
+
+  .container.formcontent.text-center
+    %h1 
+      Become a shopper with Instacart.
+    = render "applicants/form"
+
