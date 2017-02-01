@@ -22,6 +22,13 @@ group :development do
   gem 'rails_layout'
   gem 'pry'
   gem 'web-console', '~> 2.0'
-  gem 'sqlite3', '>= 1.3.5'
   gem 'spring'
+end
+
+group :development, :test do
+  gem 'sqlite3', '>= 1.3.5'
+end
+
+group :production do
+  gem 'pg'
 end
