@@ -12,6 +12,8 @@ Running the app
 
 6.Go to http://localhost:3000
 
+You can also visit https://instacart-shoppers-new.herokuapp.com/
+
 This application has only the first part of the challenge 'Shopper Application'. I have used Bootstrap to develop the front end.
 
 
